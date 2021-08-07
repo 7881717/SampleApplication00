@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val vlink1 = findViewById<View>(R.id.tv_link_sign_up_link) as TextView
+        val vlink1 = findViewById<View>(R.id.tv_link_sign_up) as TextView
         vlink1.setOnClickListener {
             Toast.makeText(
                 this@MainActivity,

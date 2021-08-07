@@ -1,22 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".RegisterActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".RegisterActivity">
+
+        <TextView
+            android:id="@+id/tv_hello2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:text="Let's get acquainted"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_hello3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fill out the profile and go to the application!"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_hello2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:textColor="#BDBDBD"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_email_edit"
+            app:layout_constraintTop_toBottomOf="@id/tv_hello3"
+            android:layout_marginTop="55dp"
+            />
+
+        <EditText
+            android:id="@+id/tv_email_edit"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="textEmailAddress"
+            android:hint="type e-mail here"
+            android:textColorHint="#BDBDBD"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="#BDBDBD"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_password_edit"
+            app:layout_constraintTop_toBottomOf="@id/tv_email_edit"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/tv_password_edit"
+            android:layout_width="@dimen/tv_width"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="textPassword"
+            android:hint="type password here"
+            android:textColorHint="#BDBDBD"
+            />
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="126dp"
+            android:layout_height="18dp"
+            android:text="Remember me"
+            android:textColor="#B2B2B3"
+            app:layout_constraintTop_toBottomOf="@id/tv_password_edit"
+            app:layout_constraintLeft_toLeftOf="@id/tv_password_edit"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button1"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            app:strokeColor="#FB5E06"
+            app:strokeWidth="2dp"
+            android:textSize="16sp"
+            android:text="REGISTER"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
 
     <TextView
-        android:id="@+id/tv0"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_you_agree"
+        android:layout_width="@dimen/tv_width"
         android:layout_height="wrap_content"
-        android:text="Reg your self."
-        android:textSize="26sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:text="By clicking Register you agree to our Terms \n and Conditions"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintLeft_toLeftOf="@id/button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button1" />
+
+
+        <TextView
+            android:id="@+id/tv_link_login_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textColor="#B2B2B3"
+            app:layout_constraintTop_toBottomOf="@id/tv_you_agree"
+            app:layout_constraintLeft_toLeftOf="@id/tv_you_agree"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="49dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_link_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            app:layout_constraintTop_toTopOf="@id/tv_link_login_invite"
+            app:layout_constraintRight_toRightOf="@id/button1"
+            android:layout_marginEnd="49dp"
+            android:textSize="14sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
