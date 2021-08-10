@@ -16,7 +16,7 @@
             android:name=".RestoreActivity"
             android:exported="true" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".AuthActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

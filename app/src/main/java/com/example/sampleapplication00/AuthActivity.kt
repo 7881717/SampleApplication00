@@ -2,10 +2,16 @@ package com.example.sampleapplication00
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import android.widget.TextView
 
-class RegisterActivity : AppCompatActivity() {
+
+
+
+class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_auth)
+
     }
 }

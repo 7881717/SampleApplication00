@@ -8,7 +8,7 @@
     tools:context=".LoggedActivity">
 
     <TextView
-        android:id="@+id/tv0"
+        android:id="@+id/tv_log0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="You are logged in."
@@ -17,6 +17,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="100dp"
         app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_log1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text to be replaced"
+        android:textSize="26sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_log0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
