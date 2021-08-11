@@ -22,27 +22,17 @@ class LoggedActivity : AppCompatActivity() {
         val fName = intent.getStringExtra("Username")
         val lName = intent.getStringExtra("Userpassword")
 
-        tvView!!.text = "Your e-mail is: $fName \nYour password is:  $lName"
 
-/**
-        val textView = TextView(this)
-        textView.textSize = 26f
+        val preName = fName?.substringBefore("@")
 
+        val first = preName?.substringBefore('.')?.capitalize()
 
-        val arguments = intent.extras
+        val preLast = preName?.substringAfter('.')
 
-        if (arguments != null) {
-            val userName = arguments["Username"].toString()
-            val userPassword = arguments.getString("Userpassword")
-            textView.text = """
-                Name: $userName
-                Pwd: $userPassword
-                """.trimIndent()
-        }
+        val last = preLast?.substringBefore('.')?.capitalize()
 
 
-        setContentView(textView)
-*/
+        tvView!!.text = "$first $last"
 
     }
 }

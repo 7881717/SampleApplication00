@@ -18,6 +18,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+        val userName = "ladislaw.pszczelarz"
+        val userPassword = "q"
+
+
+        val intent = Intent(this, LoggedActivity::class.java)
+
+        intent.putExtra("Username", userName)
+        intent.putExtra("Userpassword", userPassword)
+
+        startActivity(intent)
+
+
+
+        /**
         val vButton0 = findViewById<View>(R.id.button0) as Button
         vButton0.setOnClickListener {
 
@@ -40,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 emailCorrect = true
                 textView.text = " "
             } else {
-                textView.text = "Invalid email address"
+                textView.text = "Invalid e-mail address"
             }
 
 
@@ -55,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                 textView1.text = " "
                 passwordCorrect = true
             } else {
-                textView1.text = "At least 8 characters in the password."
+                textView1.text = "Your password must be at least 8 characters long."
             }
 
 
@@ -74,7 +90,7 @@ class MainActivity : AppCompatActivity() {
 
             if (emailCorrect && passwordCorrect) startActivity(intent)
          }
-
+*/
         val vlink0 = findViewById<View>(R.id.tv_link_forgot_password) as TextView
         vlink0.setOnClickListener {
             Toast.makeText(
