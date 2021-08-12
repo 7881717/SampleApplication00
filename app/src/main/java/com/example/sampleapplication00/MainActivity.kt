@@ -1,9 +1,9 @@
 package com.example.sampleapplication00
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -14,12 +14,14 @@ import android.widget.EditText
 
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
 
+/**
         val userName = "ladislaw.pszczelarz"
         val userPassword = "q"
 
@@ -31,9 +33,8 @@ class MainActivity : AppCompatActivity() {
 
         startActivity(intent)
 
+*/
 
-
-        /**
         val vButton0 = findViewById<View>(R.id.button0) as Button
         vButton0.setOnClickListener {
 
@@ -47,16 +48,16 @@ class MainActivity : AppCompatActivity() {
             val email = emailValidate.text.toString().trim { it <= ' ' }
 
 
-            val EMAIL_REGEX = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+            val emailRegex = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
             fun isEmailValid(email: String): Boolean {
-                return EMAIL_REGEX.toRegex().matches(email);
+                return emailRegex.toRegex().matches(email)
             }
 
             if (isEmailValid(email)) {
                 emailCorrect = true
                 textView.text = " "
             } else {
-                textView.text = "Invalid e-mail address"
+                textView.text = getString(R.string.invalid_email)
             }
 
 
@@ -71,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 textView1.text = " "
                 passwordCorrect = true
             } else {
-                textView1.text = "Your password must be at least 8 characters long."
+                textView1.text = getString(R.string.invalid_password)
             }
 
 
@@ -90,7 +91,7 @@ class MainActivity : AppCompatActivity() {
 
             if (emailCorrect && passwordCorrect) startActivity(intent)
          }
-*/
+
         val vlink0 = findViewById<View>(R.id.tv_link_forgot_password) as TextView
         vlink0.setOnClickListener {
             Toast.makeText(
