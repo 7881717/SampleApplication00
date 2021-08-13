@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.TextView
 
 
-
 import android.view.View
 
 var tvView: TextView? = null
@@ -19,19 +18,19 @@ class LoggedActivity : AppCompatActivity() {
 
         val intent = intent
 
+        // data from previous activity
         val fName = intent.getStringExtra("Username")
         val lName = intent.getStringExtra("Userpassword")
 
-
+        // first name parser
         val preName = fName?.substringBefore("@")
-
         val first = preName?.substringBefore('.')?.capitalize()
 
+        // second name parser
         val preLast = preName?.substringAfter('.')
-
         val last = preLast?.substringBefore('.')?.capitalize()
 
-
+        // show parsed names
         tvView!!.text = "$first $last"
 
     }
