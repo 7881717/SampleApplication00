@@ -18,21 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-/**
-        val userName = "ladislaw.pszczelarz"
-        val userPassword = "q"
-
-
-        val intent = Intent(this, LoggedActivity::class.java)
-
-        intent.putExtra("Username", userName)
-        intent.putExtra("Userpassword", userPassword)
-
-        startActivity(intent)
-
-*/
         // Login button
         val vButton0 = findViewById<View>(R.id.button0) as Button
         vButton0.setOnClickListener {

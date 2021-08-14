@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">SampleApplication00</string>
-    <string name="tButton0">Нажата кнопка.</string>
-    <string name="tLink0">Нажата 1-я ссылка.</string>
-    <string name="tLink1">Нажата 2-я ссылка.</string>
     <string name="login">LOGIN</string>
     <string name="don_t_have_account">Don’t have account?</string>
     <string name="sign_up">Sign up</string>
@@ -30,4 +27,5 @@
     <string name="view_my_contacts">VIEW my contacts</string>
     <string name="invalid_email">Invalid e-mail address</string>
     <string name="invalid_password">Your password must be at least 8 characters long.</string>
+    <string name="restore_your_password">Restore your password.</string>
 </resources>

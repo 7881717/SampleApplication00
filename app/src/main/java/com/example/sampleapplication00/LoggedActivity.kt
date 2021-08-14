@@ -6,9 +6,11 @@ import android.widget.TextView
 
 
 import android.view.View
+import java.util.*
 
-var tvView: TextView? = null
+
 class LoggedActivity : AppCompatActivity() {
+    var tvView: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_logged)
@@ -24,11 +26,15 @@ class LoggedActivity : AppCompatActivity() {
 
         // first name parser
         val preName = fName?.substringBefore("@")
-        val first = preName?.substringBefore('.')?.capitalize()
+        val first = preName?.substringBefore('.')
+            ?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault())
+            else it.toString() }
 
         // second name parser
         val preLast = preName?.substringAfter('.')
-        val last = preLast?.substringBefore('.')?.capitalize()
+        val last = preLast?.substringBefore('.')
+            ?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault())
+            else it.toString() }
 
         // show parsed names
         tvView!!.text = "$first $last"
